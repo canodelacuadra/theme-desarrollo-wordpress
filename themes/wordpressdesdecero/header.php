@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      <link rel="stylesheet" href="<?php bloginfo ('template_url') ?>/style.css">
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri()?> /style.css">
      
    
     <!-- Favicons -->
@@ -26,7 +26,7 @@
 <meta name="theme-color" content="#563d7c">
 
 
-    <link href="jumbotron.css" rel="stylesheet">
+  
  <?php wp_head() ?>
   </head>
   <body <?php body_class(); ?>>
@@ -43,6 +43,10 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
+    <form action='<?php bloginfo('url') ?>' method='get' class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Buscar" name="s" value="<?php the_search_query(); ?>" >
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
   </div>
 </nav>
 

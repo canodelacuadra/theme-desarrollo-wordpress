@@ -13,5 +13,19 @@ wp_nav_menu([
     'a'=>'nav-link'
     ]);
 }
-?>
+
+/// función para controlar el excerpt
+function excerpt_personalizado($length){
+    return 20;
+}
+add_filter('excerpt_length','excerpt_personalizado');
+//añadimos soporte de thumbnails
+add_theme_support('post-thumbnails');
+
+// shortcode
+function firma_guay(){
+    return 'Soy Jose';
+
+}
+add_shortcode('firma', 'firma_guay');
 
