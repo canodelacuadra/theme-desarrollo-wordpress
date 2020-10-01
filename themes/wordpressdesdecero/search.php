@@ -14,6 +14,7 @@ if(have_posts()):
 <?php
 // hasta aquí lo que va del bucle
     endwhile;
+    get_template_part('templates/content','navegacion');
 else:
     echo 'no hay resultados para tu búsqueda';
 endif; 

@@ -7,7 +7,10 @@ Tags:  dabuting
 */
 body {
     padding-top: 3.5rem;
+    background:whitesmoke;
   }
+ 
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -24,4 +27,8 @@ body {
   }
   .list-posts img { 
     width:100%;
+  }
+  .paginacion a {
+    color:white !important;
+    text-decoration: none;
   }
